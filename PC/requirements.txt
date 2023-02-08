@@ -1,0 +1,23 @@
+Project setup
+To run this project, you will need to install the following libraries:
+
+                       pip install findspark Flask
+
+You will also need to install PySpark itself. You can do this by following the instructions on the Spark website.
+
+Make sure that these libraries and PySpark are installed and available in your Python environment before running the project.
+
+Running the project
+Once you have all of the necessary dependencies installed, you can start the project by running the main.py script from the command line:
+
+                                     python main.py
+
+This will start the project and you can access it by opening a web browser and navigating to the specified host and port.
+
+Project dependencies
+This project has the following dependencies:
+
+findspark
+pyspark
+Flask
+Make sure that these dependencies are installed and available in your Python environment before running the project.

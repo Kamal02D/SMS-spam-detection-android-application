@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="32dp"
+            android:text="Accuracy : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Algorithm : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_algo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+            app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Prediction : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressView" />
+
+        <TextView
+            android:id="@+id/txt_pred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+        <com.github.guilhe.views.CircularProgressView
+            android:id="@+id/circularProgressView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/txt_algo"
+            app:progress="90"
+            app:progressBarColor="@android:color/holo_purple"
+            app:progressBarThickness="10dp" />
+
+        <TextView
+            android:id="@+id/txt_accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressView"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/txt_algo" />
+
+
+        <TextView
+            android:id="@+id/textView_spam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Spam Probability : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <com.github.guilhe.views.CircularProgressView
+            android:id="@+id/circularProgressView_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_spam"
+            app:layout_constraintStart_toEndOf="@+id/textView_spam"
+            app:layout_constraintTop_toTopOf="@+id/textView_spam"
+            app:progress="56"
+            app:progressBarColor="@android:color/holo_orange_dark"
+            app:progressBarThickness="10dp" />
+
+        <TextView
+            android:id="@+id/txt_spam_proba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="53"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressView_2"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView_2"
+            app:layout_constraintStart_toEndOf="@+id/textView_spam"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressView_2" />
+
+        <TextView
+            android:id="@+id/textView_ham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ham Probability : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView_spam"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressView_2" />
+
+        <com.github.guilhe.views.CircularProgressView
+            android:id="@+id/circularProgressView_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_ham"
+            app:layout_constraintStart_toEndOf="@+id/textView_ham"
+            app:layout_constraintTop_toTopOf="@+id/textView_ham"
+            app:progress="44"
+            app:progressBarColor="@android:color/holo_green_dark"
+            app:progressBarThickness="10dp" />
+
+        <TextView
+            android:id="@+id/txt_ham_proba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressView_3"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView_3"
+            app:layout_constraintStart_toEndOf="@+id/textView_ham"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressView_3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
